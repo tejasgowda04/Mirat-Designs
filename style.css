@@ -61,6 +61,7 @@ html {
   scroll-padding-top: 80px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -1971,6 +1972,7 @@ textarea {
     gap: 28px;
     transition: right var(--transition-smooth);
     border-left: 1px solid rgba(232,146,45,0.1);
+    overflow-y: auto;
   }
 
   .nav-links.open {
@@ -2002,7 +2004,7 @@ textarea {
   
   .contact-form-card { padding: 30px 20px; }
   .form-row { grid-template-columns: 1fr; gap: 0; } /* Stacks form inputs */
-  .quote-modal { padding: 30px 20px; width: 95%; margin: 20px; }
+  .quote-modal { padding: 30px 20px; width: 100%; margin: 0; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -2013,11 +2015,14 @@ textarea {
 @media (max-width: 480px) {
   .container { width: 92%; }
   .section-padding { padding: 60px 0; }
+  .about-image img { height: 300px; }
   .about-features { grid-template-columns: 1fr; }
   .about-experience-badge { position: relative; right: auto; bottom: auto; margin-top: 20px; display: inline-flex; gap: 12px; align-items: center; }
   .about-experience-badge .number { font-size: 2rem; }
   .portfolio-filters { gap: 6px; }
   .filter-btn { padding: 8px 16px; font-size: 0.78rem; }
+  .contact-info-card { padding: 20px 15px; gap: 12px; }
+  .contact-info-icon { width: 40px; min-width: 40px; height: 40px; font-size: 1rem; }
   .contact-social-links { flex-direction: column; }
   .whatsapp-float { width: 52px; height: 52px; bottom: 20px; right: 20px; font-size: 1.4rem; }
 }
